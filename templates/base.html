@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{% block title %}{% endblock %}</title>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="sitename"><a href="/">WANGYANDONG</a></div>
+    <div class="nav">
+      <a href="/tag.html">TAG</a>
+      <a href="/about.html">ABOUT</a>
+      <a href="">RSS</a>
+      <a href="">FORK</a>
+    </div>
+  </div>
+{%- block content -%}<p>Default content</p>{% endblock content %}
+  <div class="footer">
+    <p><small>Designed by <a href="">WYD</a></small></p>
+  </div>
+</div>
+</body>
+</html>

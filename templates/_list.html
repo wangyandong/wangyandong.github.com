@@ -1,0 +1,10 @@
+<ul class="post-list">
+	{%- for page in pages %}
+	<li>
+	<span>{{ page.date }}</span>
+	<a href="{{ url_for('page', path = page.path) }}">{{ page.title }}</a>
+	</li>
+	{% else %}
+	<li>No page.</li>
+	{% endfor %}
+</ul>
